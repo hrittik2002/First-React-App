@@ -1,6 +1,6 @@
 // Everything starts from this app.js file.......it is the root node(or file)
-import Expenses from "./components/Expenses";
-
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 function App() {
   // expense object
   const expenses = [
@@ -32,7 +32,7 @@ function App() {
    */
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense></NewExpense>
       <Expenses items={expenses}></Expenses>
     </div>
   );
