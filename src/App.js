@@ -24,6 +24,10 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const addExpenseHandler = expense => {
+    console.log('In app.js');
+    console.log(expense)
+  }
   /**
    * To pass data to a component we use the attributes......
    * and these all attributes will be passed to our custom component
@@ -32,7 +36,7 @@ function App() {
    */
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenses}></Expenses>
     </div>
   );
